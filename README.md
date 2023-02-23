@@ -1,4 +1,4 @@
 # easyFormJS
-A small library to create easily forms.
+A small library to create forms more easily.
 
 \- more information soon™️ -
