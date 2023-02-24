@@ -10,11 +10,10 @@ class easyFormJS{
             easyFormCustomDialogAnswerGiven = false;
             newForm.classList.add("dialog");
             newForm.id = "customDialog";
-            document.getElementById("easyFormJSContent").style.filter = "blur(5px)";
             document.getElementById("easyFormJSContent").style.pointerEvents = "none";
             newForm.style.position = "fixed";
             newForm.style.zIndex = "10";
-            newForm.style.filter = "blur(0px)";
+            newForm.style.backdropFilter = "blur(10px)";
             newForm.style.marginLeft = "auto";
             newForm.style.marginRight = "auto";
             newForm.style.marginTop = "auto";
