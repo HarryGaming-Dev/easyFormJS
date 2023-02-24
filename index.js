@@ -10,7 +10,9 @@ class easyFormJS{
             easyFormCustomDialogAnswerGiven = false;
             newForm.classList.add("dialog");
             newForm.id = "customDialog";
-            document.getElementById("easyFormJSContent").style.pointerEvents = "none";
+            document.getElementById("easyFormJSContent").style.transition = '.5s cubic-bezier(.65,0,.35,1)';
+            document.getElementById("easyFormJSContent").style.opacity = '0.1';
+            document.getElementById("easyFormJSContent").style.pointerEvents = 'none';
             newForm.style.position = "fixed";
             newForm.style.zIndex = "10";
             newForm.style.backdropFilter = "blur(10px)";
@@ -228,8 +230,11 @@ class easyFormJS{
     
     static finish(){
         easyFormActive = false;
-        document.getElementById('easyFormJSContent').style.filter = '';
+        document.getElementById("easyFormJSContent").style.opacity = '1';
         document.getElementById("easyFormJSContent").style.pointerEvents = '';
+        setTimeout(() => {
+            document.getElementById("easyFormJSContent").style.transition = '';
+        }, 100);
         let newForm = document.getElementById("customDialog");
         if (newForm != null){
             newForm.style.opacity = '0';
